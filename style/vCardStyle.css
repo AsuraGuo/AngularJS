@@ -1,0 +1,82 @@
+
+#editor {
+    width:350px;
+    background: silver;
+    margin:0 auto;
+    margin-top:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+input {
+    width:90%;
+    margin-left:5px;
+}
+button {
+    margin-left:5px;
+}
+#cardShow {
+    width:350px;
+    height:200px;
+    background-color: rgb(239,218,175);
+    box-shadow: 0 0 2px #323232;
+    margin:0 auto;
+    margin-top:20px;
+}
+header {
+    background:#323232;
+    padding:5px;
+}
+header h4 {
+    color:white;
+    line-height:0;
+    font-family:helvetica;
+    margin:7px;
+    margin-top:20px;
+    text-shadow: 1px 1px black;
+    text-transform:uppercase;
+}
+header p {
+    line-height:0;
+    color:silver;
+    font-size:10px;
+    margin:11px;
+    margin-bottom:20px;
+}
+#theBody {
+    background:blue;
+    width:100%;
+    height:auto;
+}
+#theLeft {
+    width:50%;
+    float:left;
+    text-align:right;
+}
+#theLeft h2 {
+    margin-right:10px;
+    margin-top:40px;
+    font-family:helvetica;
+    margin-bottom:0;
+    color:#323232;
+}
+#theLeft h5 {
+    margin-right:10px;
+    font-family:helvetica;
+    margin-top:5px;
+    line-height:0;
+    font-weight: bold;
+    color:#323232;
+}
+
+#theRight {
+    width:50%;
+    float:right;
+    padding-top:42px;
+}
+#theRight p {
+    line-height:0;
+    font-size:12px;
+    color:#323232;
+    font-family:Calibri;
+    margin-left:15px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vCard Creator demo</title>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="./style/vCardStyle.css">
+</head>
+<body>
+<div id="wrapper" ng-app>
+    <h1>实时名片制作</h1>
+    <div id="editor">
+        <input placeholder="公司" ng-model="cname"/>
+        <input placeholder="公司标识" ng-model="tagline"/>
+        <input placeholder="姓名" ng-model="name"/>
+        <input placeholder="描述" ng-model="desig"/>
+        <input placeholder="手机号码" ng-model="phone"/>
+        <input placeholder="邮箱地址" ng-model="email"/>
+        <input placeholder="个人网站" ng-model="url"/>
+        <button id="saveBtn">下载名片</button>
+    </div>
+    <div id="cardShow">
+        <header>
+            <h4>{{cname}}</h4>
+            <p>{{tagline}}</p>
+        </header>
+        <div id="theBody">
+            <div id="theLeft">
+                <h2>{{name}}</h2>
+                <h5>{{desig}}</h5>
+            </div>
+            <div id="theRight">
+                <p>{{phone}}</p>
+                <p>{{email}}</p>
+                <p>{{url}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script  src="./script/angular-1.2.14/angular.js"></script>
+<script  src="./script/jquery-3.0.0.js"></script>
+<script  src="./script/html2canvas.js"></script>
+<script  src="./script/canvas2image.js"></script>
+<script  src="./script/base64.js"></script>
+<script>
+
+	$(function() {
+
+        $("#saveBtn").click(function() {
+
+            html2canvas($("#cardShow"), {
+
+                onrendered: function(canvas) {
+
+                    theCanvas = canvas;
+
+                    console.log(theCanvas);
+
+                    Canvas2Image.saveAsPNG(canvas);
+
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
